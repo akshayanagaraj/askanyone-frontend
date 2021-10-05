@@ -1,38 +1,115 @@
+@font-face {
+	font-family: 'Ephesis', cursive;
+	src: url('./assets/Fonts/Ephesis-Regular.ttf');
+}
+
 .App {
-  text-align: center;
+  background-color: whitesmoke;
+  height: 100%
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.login-page{
+  
+  height: 100vh !important;
+  background-color: #256EC1;
+}
+.login-page .title{
+  font-family: 'Ephesis', cursive;
+  font-size: 13vh;
+  padding-left: 3vh;
+  color: #40dfc6;
+}
+.login-card{
+  width: 50%;
+  background-color: white;
+  border-radius: 25px;
+  margin-top: 15vh;
+  padding: 5vh;
+}
+.center{
+  margin-left: auto;
+  margin-right: auto;
+}
+.logo{
+  
+  margin-left: 15%;
+  margin-top:2%;
+  width: 12%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+input{
+  padding: 5px;
+  height: 20px;
+  width: 50%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.primary-button{
+  background-color: #2547F1;
+  border:none;
   color: white;
+  height: 30px;
+  width: 30%;
+  border-radius: 5px;
+  cursor: pointer;
+
+}
+.page{
+  
+}
+.header{
+  width: 100vw;
+  height: 8vh;
+  background-color: #256EC1;
+  position: fixed;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+  padding-left: 10vw;
+  padding-right: 10vw;
 }
 
-.App-link {
-  color: #61dafb;
+.logo-text{
+  font-family: 'Ephesis', cursive;
+  font-size: 2rem;
+  padding-left: 1vw;
+  color: #40dfc6;
+}
+.page{
+  padding-top: 13vh;
+  display: grid;
+  grid-template-columns: 15vw 50vw 15vw;
+  background-color: whitesmoke;
+  padding-left:10vw;
+  padding-right: 10vw;
+  height: 100vh;
+}
+.list-tabs{
+  font-size: 0.9rem;
+  color: #636466;
+  line-height-step: 1rem;
+}
+.tab{
+  padding: 0.5rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+ul,li{
+  list-style: none;
+}
+
+.list-selection{
+  padding: 3px;
+  cursor: pointer;
+  text-align: center;
+  width: 60%;
+
+}
+.list-selection:hover{
+  background-color: lightgray;
+  border-radius: 5px;
+  border: none;
+}
+
+.selected{
+  background-color: lightgray;
+  border-radius: 5px;
+  border: none;
 }

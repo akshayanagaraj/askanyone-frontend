@@ -1,25 +1,29 @@
-import logo from './logo.svg';
+import React, {useState, useRef, useEffect} from 'react'
+import { useSelector } from 'react-redux'
+import { connect } from 'react-redux'
+import Login from './views/Login'
+import Home from './views/Home/Index'
+
+
+
+
 import './App.css';
 
-function App() {
+const App = () => {
+  let user_id = useSelector((state) => state.user.sign_in.user_id)
+  
+  console.log('user_id',localStorage.getItem('usr_id'))
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {
+        ((localStorage.getItem('usr_name')!== '') && (localStorage.getItem('usr_id') > 0) || (user_id > 0))?
+        <Home/>
+        :
+        <Login/>
+      }
+      
     </div>
   );
 }
 
-export default App;
+export default connect()(App);
