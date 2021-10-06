@@ -64,3 +64,13 @@ export const login = (username, password) => {
         }
     } 
 }
+
+export const logout = () => {
+    return ((dispatch) => {
+        localStorage.setItem('usr_name','')
+        localStorage.setItem('usr_id',0)
+        dispatch({
+            type: 'LOGOUT'
+        })
+    })
+}
